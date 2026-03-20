@@ -9,7 +9,7 @@ export default function Hero() {
   
 
   useEffect(() => {
-    const BASE = process.env.REACT_APP_API_URL || import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    const BASE = 'https://yashas-backend.vercel.app';
     fetch(`${BASE}/api/about`)
       .then(r => r.json())
       .then(data => { if (data.data) setAbout(data.data); })
